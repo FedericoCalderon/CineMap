@@ -1,0 +1,40 @@
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #212938;
+}
+.footerCinemap {
+    color: white;
+    font-size: 165%;
+    font-family: -webkit-body;
+    font-style: italic;
+}
+.footerVisit {
+    color: white;
+}
+.footerVisitPA{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+.footerVisitPA a {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    color: turquoise;
+    margin-left: 3%;   
+}
+.footerCredits{
+    color: white;
+    font-family: monospace;
+    font-size: 150%;
+    text-align: center;
+}
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

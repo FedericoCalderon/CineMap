@@ -1,0 +1,67 @@
+/* .landingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.landingContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landingContainer::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-image: url("https://i.pinimg.com/originals/86/f1/99/86f199d0c6f5cedd14c121164fa5fafc.jpg");
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.25;
+}
+.landingDivContainerP {
+    display: block;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0,40,60);
+    /* opacity: 1; */
+    border-radius: 15px;
+    padding: 1%;
+    position: relative;
+}
+.containerLandingDivContainerP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landingP {
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+.mapImgs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.landingImg {
+    width: 75%;
+    margin: 4%;
+}
+.landingImg:hover {
+    cursor: pointer;
+    transform: translateY(5px);
+    box-shadow: 0 40px 60px skyblue;
+}
+.landingLinkTo {
+    width: 50%;
+}
