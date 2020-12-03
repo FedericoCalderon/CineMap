@@ -70,11 +70,15 @@ export default class Card extends Component {
                         {
                             this.props.favoriteMovie.poster !== "N/A" ? 
                             <div className='imgSearch' >
-                                <img src={this.props.favoriteMovie.poster}></img>
+                                <Link to={`/movie/:${this.props.favoriteMovie.id}`}>
+                                    <img src={this.props.favoriteMovie.poster}></img>
+                                </Link>
                             </div>
                             :
                             <div className='imgSearch'>
-                                <img src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg" alt=""/>
+                                <Link to={`/movie/:${this.props.favoriteMovie.id}`}>
+                                    <img src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg" alt=""/>
+                                </Link>
                             </div>
                         }
                         <p></p>
