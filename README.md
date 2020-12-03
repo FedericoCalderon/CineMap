@@ -1,6 +1,11 @@
 # CineMap
 
 ### A website fully developed in frontend to get information about movies, series, tv shows and more... 
+### 
+### Visit the Website here
+<a href="https://silly-bardeen-fa0506.netlify.app">Link</a>
+
+
 #### Landing
 <img width="90%" src="./src/img/landing.PNG" alt="About screen" title="Landing"/>
 
