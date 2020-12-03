@@ -7,7 +7,7 @@ import './Landing.css';
 export class Landing extends Component {
     constructor (props){
         super(props)
-        this.movies = ['home', 'dogs', 'terminator', '300', 'ice age', 'avengers', 'war', 'bad', 'man'];
+        this.movies = ['home', 'dogs', 'terminator', '300', 'age', 'war', 'bad', 'man'];
         this.random = Math.floor(Math.random()*this.movies.length);
     }
     componentDidMount() {
