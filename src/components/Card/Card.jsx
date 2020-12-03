@@ -81,7 +81,6 @@ export default class Card extends Component {
                                 </Link>
                             </div>
                         }
-                        <p></p>
                         <div className='divButton'>
                             <button
                                 className='btnRemove'
