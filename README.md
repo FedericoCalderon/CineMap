@@ -2,11 +2,11 @@
 
 ### A website fully developed in frontend to get information about movies, series, tv shows and more... 
 #### Landing
-<img width="90%" src="./src/img/Landing.PNG" alt="About screen" title="Landing"/>
+<img width="90%" src="./src/img/landing.PNG" alt="About screen" title="Landing"/>
 
 
 #### Catalogue
-<img width="90%" src="./src/img/Catalogue.PNG" alt="About screen" title="Catalogue"/>
+<img width="90%" src="./src/img/catalogue.PNG" alt="About screen" title="Catalogue"/>
 
 ## Use
 
