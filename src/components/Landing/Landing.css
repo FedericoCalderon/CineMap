@@ -25,7 +25,7 @@
 }
 .landingDivContainerP {
     display: block;
-    width: 50%;
+    width: 70%;
     justify-content: center;
     align-items: center;
     background: rgb(0,40,60);
@@ -52,6 +52,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.mapImgs a {
+    display: flex;
+    justify-content: center;
 }
 .landingImg {
     width: 75%;
