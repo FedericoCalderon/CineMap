@@ -26,12 +26,18 @@ const initialState = {
           movieDetail: action.payload
         };
     case ADD_MOVIE_FAVORITE:
-      state.movies = state.movies.filter(movie => movie.id !== action.payload.id)
-      return { ...state, movies: state.movies.concat(action.payload) };
+      state.movies = state.movies.filter(movie => movie.imdbID !== action.payload.imdbID)
+      return {
+        ...state,
+        movies: state.movies.concat(action.payload),
+        moviesLoaded: state.moviesLoaded.filter(movie => movie.imdbID !== action.payload.imdbID)
+      };
     case REMOVE_MOVIE_FAVORITES:
+      state.moviesLoaded = state.moviesLoaded.filter(movie => movie.imdbID !== action.payload.imdbID)
         return {
           ...state,
-          movies: state.movies.filter(movie => movie.title !== action.payload.title)
+          movies: state.movies.filter(movie => movie.imdbID !== action.payload.imdbID),
+          moviesLoaded: state.moviesLoaded.concat(action.payload),
         };
     case REMOVE_ALL_FAVORITES:
         return {

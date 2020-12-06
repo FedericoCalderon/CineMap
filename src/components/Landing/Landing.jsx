@@ -14,7 +14,6 @@ export class Landing extends Component {
             this.props.getMovies(this.movies[this.random])
     }
     render(props){
-        console.log('render ',this.props.moviesLoaded)
         return (
             <div className='landingContainer'>
                 {

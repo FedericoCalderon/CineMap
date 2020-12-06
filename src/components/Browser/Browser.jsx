@@ -14,8 +14,8 @@ export class Browser extends Component {
     };
   }
   componentDidMount() {
-    // console.log(this.props.moviesLoaded)
     !this.props.moviesLoaded.length && this.props.getMovies(this.movies[this.random])
+    
   }
   handleChange(event) {
     this.setState({ title: event.target.value });
@@ -33,7 +33,6 @@ export class Browser extends Component {
     this.handleRandom()
   }
   render() {
-    
     const { title } = this.state;
     return (
       <div>

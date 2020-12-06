@@ -6,21 +6,19 @@ export default class Card extends Component {
     handleAdd(e,props){
         props.addMovieFavorite(
             {
-                title: this.props.movie.Title,
-                id: this.props.movie.imdbID,
-                poster: this.props.movie.Poster
+                Title: props.movie.Title,
+                imdbID: props.movie.imdbID,
+                Poster: props.movie.Poster
             })
-        const btn = e.target;
-        if (btn) {
-            btn.id = 'addedToFav';
-            btn.innerText = 'Added ✔';
-        }
+        alert("Movie added to favorites !!")
     }
     handleRemove(props){
         props.removeMovieFavorite({
-            title: this.props.favoriteMovie.title,
-            id: this.props.favoriteMovie.imdbID
+            Title: props.favoriteMovie.Title,
+            imdbID: props.favoriteMovie.imdbID,
+            Poster: props.favoriteMovie.Poster
         })
+        alert("Movie removed from favorites !!")
     }
     render (props) {
         if(this.props.type === 'browser'){
@@ -65,18 +63,18 @@ export default class Card extends Component {
                 <div>
                     <div className='movieCard' key={this.props.index}>
                         <div className='divTitle'>
-                            <Link to={`/movie/:${this.props.favoriteMovie.id}`}><h3>{this.props.favoriteMovie.title}</h3></Link>
+                            <Link to={`/movie/:${this.props.favoriteMovie.imdbID}`}><h3>{this.props.favoriteMovie.Title}</h3></Link>
                         </div>
                         {
-                            this.props.favoriteMovie.poster !== "N/A" ? 
+                            this.props.favoriteMovie.Poster !== "N/A" ? 
                             <div className='imgSearch' >
-                                <Link to={`/movie/:${this.props.favoriteMovie.id}`}>
-                                    <img src={this.props.favoriteMovie.poster}></img>
+                                <Link to={`/movie/:${this.props.favoriteMovie.imdbID}`}>
+                                    <img src={this.props.favoriteMovie.Poster}></img>
                                 </Link>
                             </div>
                             :
                             <div className='imgSearch'>
-                                <Link to={`/movie/:${this.props.favoriteMovie.id}`}>
+                                <Link to={`/movie/:${this.props.favoriteMovie.imdbID}`}>
                                     <img src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg" alt=""/>
                                 </Link>
                             </div>

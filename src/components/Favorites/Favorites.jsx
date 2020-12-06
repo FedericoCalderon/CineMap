@@ -22,7 +22,7 @@ export class ConnectedList extends Component {
         </div>
         <div className='containerCards'>
           {
-            this.props.moviesFavorites.length ? this.props.moviesFavorites.map((favoriteMovie, index) => {
+            this.props.movies.length ? this.props.movies.map((favoriteMovie, index) => {
               return (
                 <Card
                   key={index}
@@ -46,7 +46,7 @@ export class ConnectedList extends Component {
 
 function mapStateToProps(state) {
   return {
-    moviesFavorites: state.movies,
+    movies: state.movies,
   };
 }
 
