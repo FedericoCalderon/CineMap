@@ -14,7 +14,8 @@ export class Browser extends Component {
     };
   }
   componentDidMount() {
-    this.props.getMovies(this.movies[this.random])
+    // console.log(this.props.moviesLoaded)
+    !this.props.moviesLoaded.length && this.props.getMovies(this.movies[this.random])
   }
   handleChange(event) {
     this.setState({ title: event.target.value });
