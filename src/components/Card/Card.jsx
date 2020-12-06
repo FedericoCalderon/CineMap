@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
+import swal from 'sweetalert';
 import './Card.css'
 
 export default class Card extends Component {
@@ -10,7 +11,7 @@ export default class Card extends Component {
                 imdbID: props.movie.imdbID,
                 Poster: props.movie.Poster
             })
-        alert("Movie added to favorites !!")
+        swal("Movie added to favorites !!", `"${props.movie.Title}" has been added to the favorites tab!!`);
     }
     handleRemove(props){
         props.removeMovieFavorite({
@@ -18,7 +19,7 @@ export default class Card extends Component {
             imdbID: props.favoriteMovie.imdbID,
             Poster: props.favoriteMovie.Poster
         })
-        alert("Movie removed from favorites !!")
+        swal("Movie removed from favorites !!", `"${props.favoriteMovie.Title}" has been added to the catalog tab`);
     }
     render (props) {
         if(this.props.type === 'browser'){
