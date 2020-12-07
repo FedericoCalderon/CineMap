@@ -4,9 +4,14 @@ import { removeMovieFavorite, removeAllFavorites } from "../../redux/actions/ind
 import Card from '../Card/Card.jsx'
 import './Favorites.css';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 export class ConnectedList extends Component {
-
+  handleRemoveAll(e, props) {
+    props.removeAll();
+    swal('All movies was removed!!', 'the movies are in catalogue tab');
+    return
+  }
   render(props) {
     return (
       <div className='divFavorites'>
@@ -15,7 +20,7 @@ export class ConnectedList extends Component {
           <button
             className='btnRemove'
             type='button'
-            onClick={() => this.props.removeAll()}
+            onClick={(e) => this.handleRemoveAll(e, this.props)}
             >
               Remove All
             </button>

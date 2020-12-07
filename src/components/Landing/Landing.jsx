@@ -21,8 +21,8 @@ export class Landing extends Component {
                         {
                             this.props.moviesLoaded && this.props.moviesLoaded.map((movie, index) =>{
                             if(index < 3)
-                                return <Link to={`/movie/:${movie.imdbID}`} ><img className='landingImg' src={movie.Poster !== 'N/A' && movie.Poster} alt="No Image"/></Link>
-                                // return <img className='landingImg' src={movie.Poster !== 'N/A' && movie.Poster} alt="Nada"/>
+                                return <Link key={index} to={`/movie/:${movie.imdbID}`} ><img className='landingImg' src={movie.Poster !== 'N/A' && movie.Poster} alt="Not found"/></Link>
+                            else return null;
                             })
                         }
                     </div>
@@ -41,8 +41,8 @@ export class Landing extends Component {
                         {
                             this.props.moviesLoaded && this.props.moviesLoaded.map((movie, index) =>{
                                 if(index >= 3 && index < 6)
-                                    return <Link to={`/movie/:${movie.imdbID}`} ><img className='landingImg' src={movie.Poster !== 'N/A' && movie.Poster} alt="No Image"/></Link>
-                                    // return <img className='landingImg' src={movie.Poster} alt="Nada"/>
+                                    return <Link key={index} to={`/movie/:${movie.imdbID}`} ><img className='landingImg' src={movie.Poster !== 'N/A' && movie.Poster} alt="Not found"/></Link>
+                                else return null;
                             })
                         }
                     </div>

@@ -40,6 +40,7 @@ const initialState = {
           moviesLoaded: state.moviesLoaded.concat(action.payload),
         };
     case REMOVE_ALL_FAVORITES:
+      state.movies.map(movie => state.moviesLoaded.push(movie))
         return {
           ...state,
           movies: [],
